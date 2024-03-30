@@ -1,4 +1,35 @@
 .footer{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.904);
     color:white;
+}
+#contain{
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+}
+#contain p{
+    font-family: monospace;
+    font-size: 20px;
+}
+#contain3 p{
+    font-family: monospace;
+    font-size: 20px;
+}
+#contain3{
+    margin-left:180px;
+}
+#footer_heading{
+    margin-left: 100px;
+    font-size: 28px;
+    font-family: monospace;
+    font-weight: bold;
+}
+#logo{
+    width: 380px;
+}
+#copyright p{
+    font-family: monospacezz;
+    font-size: 15px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }

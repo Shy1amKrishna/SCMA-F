@@ -5,15 +5,39 @@ const Footer = () => {
   return (
     <div className="footer">
       <img id="logo" src={logo_simat} alt="logo" />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <p id="footer_heading">Contact</p>
+      <div id="contain">
+        <div id="contact">
+          <p>Phone:</p>
+          <p>0466 2370200, 2371300,</p>
+          <p>9447131000, 7902815555</p>
+        </div>
+        <div id="Email">
+          <p>Email:</p>
+          <p>principal@simat.ac.in,</p>
+          <p>sreepathycollege@gmail.com</p>
+        </div>
+        <div id="Fax">
+          <p>Fax:</p>
+          <p>0466-2370300</p>
+        </div>
+      </div>
+      <div id="address">
+        <div id="contain2">
+          <p id="footer_heading">Address</p>
+          <div id="contain3">
+            <p>Vavannor, Palakad District, Koottanad,</p>
+            <p>Palakkad (Kerala)</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div id="copyright">
+        <p>
+          © All Rights Reserved. Sreepathy Institute of Management and
+          Technology.Developed and managed by CSE Department.
+        </p>
+      </div>
     </div>
   );
 };
