@@ -16,7 +16,7 @@ h1 {
     flex-direction: column;
     margin-left: auto;
     align-items: center;
-    width: 80vh; /* Adjusted width to be more responsive */
+    width: 85vh; /* Adjusted width to be more responsive */
     background: url("../Assets/background.jpg") no-repeat fixed;
     background-size: cover;
     height: 100vh;
@@ -78,8 +78,26 @@ h1 {
     margin-top: 120px;
     font-size: 50px;
 }
-
-
+#introduction{
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+#introduction h2 {
+    font-size: 28px; /* Adjust the size as needed */
+    color: white;
+}
+#introduction h3 {
+    font-size: 22px; /* Adjust the size as needed */
+}
+#introduction li {
+    font-size: 18px; /* Adjust the size as needed */
+}
+#introduction p {
+    font-size: 20px; /* Adjust the size as needed */
+    color:rgb(124, 242, 242);
+}
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {

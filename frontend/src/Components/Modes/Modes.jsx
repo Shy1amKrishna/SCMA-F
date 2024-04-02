@@ -21,7 +21,30 @@ export const Modes = () => {
       <Navbar />
       <div className="Mcontainer1">
         <div className="welcome_text">
-          <p id="big_text">instructions</p>
+          <div id="introduction">
+            <h2>Welcome to Our System Maintenance Reporting Platform!</h2>
+            <div id="user-features">
+              <h3>For Users:</h3>
+              <ul>
+                <li>Easily report system damages for maintenance.</li>
+                <li>Check the status of your complaints.</li>
+                <li>Simple submission process for quick assistance.</li>
+              </ul>
+            </div>
+            <div id="admin-features">
+              <h3>For Admins:</h3>
+              <ul>
+                <li>Access and manage incoming complaints.</li>
+                <li>Update complaint statuses as needed.</li>
+                <li>Add other admins for efficient collaboration.</li>
+              </ul>
+              <p>
+                Join us in our mission to uphold the reliability and performance
+                of our systems by utilizing our intuitive reporting and
+                management tools.
+              </p>
+            </div>
+          </div>
         </div>
         <div className="Mcontainer2">
           <h1 className="cool-heading">Modes</h1>
