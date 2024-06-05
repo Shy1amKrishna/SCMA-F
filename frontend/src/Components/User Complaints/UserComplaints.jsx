@@ -55,7 +55,7 @@ export const UserComplaints = () => {
   const handleNotButtonClick = async (itemId) => {
     try {
       await axios.put(`http://localhost:5000/complaints/${itemId}`, {
-        status: "Not Fixed",
+        status: "Waiting",
       });
 
       // Refetch the updated list of systems from the server
@@ -68,11 +68,16 @@ export const UserComplaints = () => {
     }
   };
 
+  function handleButton(data) {
+    /*console.log(data);*/
+    setFilter(data.toUpperCase());
+  }
+
   return (
     <>
       <Navbar />
-      <div className="container1">
-        <div className="container2">
+      <div className="contain0">
+        <div className="contain">
           <h1 className="cool-heading">user complaints</h1>
           <div className="box">
             <div className="Cinput">
@@ -87,7 +92,15 @@ export const UserComplaints = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <ul id="Clist" style={{ listStyleType: "none", padding: 0 }}>
+            <div style={{ marginBottom: "10px" }} className="button-container2">
+              <button onClick={() => handleButton("fixed")}>
+                <strong>Fixed</strong>
+              </button>
+              <button onClick={() => handleButton("waiting")}>
+                <strong>Waiting</strong>
+              </button>
+            </div>
+            <ul id="Ulist" style={{ listStyleType: "none", padding: 0 }}>
               {systems.map((item, index) => (
                 <li
                   key={index}
@@ -96,7 +109,6 @@ export const UserComplaints = () => {
                       filterList(item.UserName) ||
                       filterList(item.Lab) ||
                       filterList(item.SystemName) ||
-                      filterList(item.Complaint) ||
                       filterList(item.Status) ||
                       filterList(item.Date)
                         ? ""
@@ -129,7 +141,7 @@ export const UserComplaints = () => {
                       <strong>Fixed</strong>
                     </button>
                     <button onClick={() => handleNotButtonClick(item._id)}>
-                      <strong>Not Fixed</strong>
+                      <strong>Waiting</strong>
                     </button>
                   </div>
                 </li>

@@ -125,7 +125,7 @@ app.post("/complaints", async (req, res) => {
       SystemName: SystemName,
       Complaint: Complaint,
       Date: Date,
-      Status: "Not fixed",
+      Status: "Waiting",
     };
 
     await collection.ComplaintModel.create(newComplaint); // Create new complaint

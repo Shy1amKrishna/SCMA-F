@@ -39,6 +39,11 @@ export const MyComplaints = () => {
     return txtValue.includes(filter);
   };
 
+  function handleButton(data) {
+    /*console.log(data);*/
+    setFilter(data.toUpperCase());
+  }
+
   if (systems.length === 0) {
     return (
       <>
@@ -56,25 +61,34 @@ export const MyComplaints = () => {
   return (
     <>
       <Navbar />
-      <div className="container1">
-        <div className="container2">
+      <div className="contain0">
+        <div className="contain">
           <h1 className="cool-heading">my complaints</h1>
+          <div className="Cinput">
+            <img
+              src={ComputerIcon}
+              alt="Computer Icon"
+              title="Computer icons created by Freepik - Flaticon"
+            />
+            <input
+              type="text"
+              placeholder="Search here!"
+              onChange={handleInputChange}
+            />
+          </div>
+          <div style={{ marginBottom: "10px" }} className="button-container3">
+            <button onClick={() => handleButton("fixed")}>
+              <strong>Fixed</strong>
+            </button>
+            <button onClick={() => handleButton("waiting")}>
+              <strong>Waiting</strong>
+            </button>
+          </div>
           <div className="box">
-            <div className="Cinput">
-              <img
-                src={ComputerIcon}
-                alt="Computer Icon"
-                title="Computer icons created by Freepik - Flaticon"
-              />
-              <input
-                type="text"
-                placeholder="Search here!"
-                onChange={handleInputChange}
-              />
-            </div>
             <ul id="Clist" style={{ listStyleType: "none", padding: 0 }}>
               {systems.map((item, index) => (
                 <li
+                  id="li"
                   key={index}
                   style={{
                     display:

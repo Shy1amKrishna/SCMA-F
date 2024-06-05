@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import "./Maintenance.css";
 import Computer_icon from "../Assets/computer.png";
 import axios from "axios"; // Import Axios library
@@ -11,7 +11,7 @@ export const Maintenance = () => {
   const UserName = localStorage.getItem("userName");
   let Lab;
   //console.log(Lab);
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const backendAddress = "http://localhost:5000/complaints";
   //console.log("SystemName:",systemName);
 
@@ -30,7 +30,7 @@ export const Maintenance = () => {
 
   function reset() {
     setComplaint("");
-    navigate("/");
+    //navigate("/");
   }
 
   function getOption() {
