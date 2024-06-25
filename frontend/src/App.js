@@ -9,22 +9,24 @@ import { Maintenance } from "./Components/Maintenance/Maintenance";
 import { About } from "./Components/About/About";
 import { Signup } from "./Components/Signup/Signup";
 import { Modes } from "./Components/Modes/Modes";
-import Footer from "./Components/Footer/Footer";
+import SideMenu from "./Components/SideMenu/SideMenu";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Modes />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/UserComplaints" element={<UserComplaints />} />
-        <Route path="/MyComplaints" element={<MyComplaints />} />
-        <Route path="/Maintenance" element={<Maintenance />} />
-        <Route path="/About" element={<About />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-      <Footer />
+      <div id="cover">
+        <SideMenu />
+        <Routes>
+          <Route path="/" element={<Modes />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/UserComplaints" element={<UserComplaints />} />
+          <Route path="/MyComplaints" element={<MyComplaints />} />
+          <Route path="/Maintenance" element={<Maintenance />} />
+          <Route path="/About" element={<About />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </div>
     </div>
   );
 }

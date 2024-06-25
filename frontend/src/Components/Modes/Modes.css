@@ -146,3 +146,8 @@ h1 {
         font-size: 1.2em; /* Adjusted font size for larger tablets */
     }
 }
+@media (max-width: 800px) {
+    .Mcontainer1{
+        padding-top: 0px;
+    }
+}
