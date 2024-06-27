@@ -9,13 +9,11 @@ import { Maintenance } from "./Components/Maintenance/Maintenance";
 import { About } from "./Components/About/About";
 import { Signup } from "./Components/Signup/Signup";
 import { Modes } from "./Components/Modes/Modes";
-import SideMenu from "./Components/SideMenu/SideMenu";
 
 function App() {
   return (
     <div className="App">
       <div id="cover">
-        <SideMenu />
         <Routes>
           <Route path="/" element={<Modes />} />
           <Route path="/login" element={<Login />} />

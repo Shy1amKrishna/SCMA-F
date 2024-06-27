@@ -3,6 +3,7 @@ import axios from "axios";
 import "./UserComplaints.css";
 import ComputerIcon from "../Assets/computer.png"; // Renamed variable to follow convention
 import { Navbar } from "../Navbar2/Navbar";
+import SideMenu from "../SideMenu/SideMenu";
 
 export const UserComplaints = () => {
   const [filter, setFilter] = useState("");
@@ -75,6 +76,7 @@ export const UserComplaints = () => {
 
   return (
     <>
+      <SideMenu />
       <Navbar />
       <div className="contain0">
         <div className="contain">

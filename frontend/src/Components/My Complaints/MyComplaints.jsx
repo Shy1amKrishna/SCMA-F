@@ -3,6 +3,7 @@ import axios from "axios";
 import "./MyComplaints.css";
 import ComputerIcon from "../Assets/computer.png"; // Renamed variable to follow convention
 import { Navbar } from "../Navbar2/Navbar";
+import SideMenu from "../SideMenu/SideMenu";
 
 export const MyComplaints = () => {
   const loggedUser = localStorage.getItem("userName");
@@ -60,6 +61,7 @@ export const MyComplaints = () => {
 
   return (
     <>
+      <SideMenu />
       <Navbar />
       <div className="contain0">
         <div className="contain">

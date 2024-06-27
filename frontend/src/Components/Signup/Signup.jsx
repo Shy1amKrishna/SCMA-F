@@ -4,6 +4,8 @@ import "./Signup.css";
 import user_icon from "../Assets/person.png";
 import password_icon from "../Assets/password.png";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "../Navbar2/Navbar";
+import SideMenu from "../SideMenu/SideMenu";
 
 export const Signup = () => {
   const navigate = useNavigate();
@@ -56,6 +58,8 @@ export const Signup = () => {
 
   return (
     <>
+      <SideMenu />
+      <Navbar />
       <div className="container">
         <div className="header">
           <div className="text">Signup</div>

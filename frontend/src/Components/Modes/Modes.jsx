@@ -2,6 +2,7 @@ import React from "react";
 import "./Modes.css";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "../Navbar2/Navbar";
+import SideMenu from "../SideMenu/SideMenu";
 
 export const Modes = () => {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ export const Modes = () => {
 
   return (
     <>
+      <SideMenu />
       <Navbar />
       <div className="Mcontainer1">
         <div className="welcome_text">

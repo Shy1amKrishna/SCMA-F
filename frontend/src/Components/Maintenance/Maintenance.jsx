@@ -4,6 +4,7 @@ import "./Maintenance.css";
 import Computer_icon from "../Assets/computer.png";
 import axios from "axios"; // Import Axios library
 import { Navbar } from "../Navbar2/Navbar";
+import SideMenu from "../SideMenu/SideMenu";
 
 export const Maintenance = () => {
   const [complaint, setComplaint] = useState("");
@@ -63,6 +64,7 @@ export const Maintenance = () => {
 
   return (
     <>
+      <SideMenu />
       <Navbar />
       <div className="container1">
         <div className="container2">
