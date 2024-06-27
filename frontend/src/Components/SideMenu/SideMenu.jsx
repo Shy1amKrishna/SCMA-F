@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../Assets/SCMA_logo.png";
-import User from "../Assets/person.png";
 import { useNavigate } from "react-router-dom";
 import "./SideMenu.css";
 
@@ -41,32 +39,34 @@ const SideMenu = () => {
         <div className="slide">
           <p id="menu_heading">MENU</p>
           <hr />
-          {isLogged === "true" ? (
-            <div id="user_container">
-              <i className="far fa-user"></i>
-              {userName}
-            </div>
-          ) : null}
+          <br />
           <ul>
             {isLogged === "true" && mode === "User" ? (
               <li>
                 <a className="a_sidemenu" href="/MyComplaints">
-                  <i className="far fa-comments"></i>My Complaints
+                  My Complaints
                 </a>
               </li>
             ) : null}
             {isLogged === "true" && mode === "Admin" ? (
               <li>
                 <a className="a_sidemenu" href="/signup">
-                  <i className="far fa-user"></i>Add admin
+                  Add admin
                 </a>
               </li>
             ) : null}
             <li>
               <a className="a_sidemenu" href="/About">
-                <i className="far fa-heart"></i>About us
+                About us
               </a>
             </li>
+            {isLogged === "true" ? (
+              <li>
+                <a className="a_sidemenu" href="/" onClick={LogOut}>
+                  Logout
+                </a>
+              </li>
+            ) : null}
           </ul>
         </div>
       </div>
