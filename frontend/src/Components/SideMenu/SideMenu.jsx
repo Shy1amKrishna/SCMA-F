@@ -40,34 +40,36 @@ const SideMenu = () => {
           <p id="menu_heading">MENU</p>
           <hr />
           <br />
-          <ul>
-            {isLogged === "true" && mode === "User" ? (
+          <div id="list">
+            <ul>
+              {isLogged === "true" && mode === "User" ? (
+                <li>
+                  <a className="a_sidemenu" href="/MyComplaints">
+                    My Complaints
+                  </a>
+                </li>
+              ) : null}
+              {isLogged === "true" && mode === "Admin" ? (
+                <li>
+                  <a className="a_sidemenu" href="/signup">
+                    Add admin
+                  </a>
+                </li>
+              ) : null}
               <li>
-                <a className="a_sidemenu" href="/MyComplaints">
-                  My Complaints
+                <a className="a_sidemenu" href="/About">
+                  About us
                 </a>
               </li>
-            ) : null}
-            {isLogged === "true" && mode === "Admin" ? (
-              <li>
-                <a className="a_sidemenu" href="/signup">
-                  Add admin
-                </a>
-              </li>
-            ) : null}
-            <li>
-              <a className="a_sidemenu" href="/About">
-                About us
-              </a>
-            </li>
-            {isLogged === "true" ? (
-              <li>
-                <a className="a_sidemenu" href="/" onClick={LogOut}>
-                  Logout
-                </a>
-              </li>
-            ) : null}
-          </ul>
+              {isLogged === "true" ? (
+                <li>
+                  <a className="a_sidemenu" href="/" onClick={LogOut}>
+                    Logout
+                  </a>
+                </li>
+              ) : null}
+            </ul>
+          </div>
         </div>
       </div>
     </>
