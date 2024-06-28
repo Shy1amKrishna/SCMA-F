@@ -39,7 +39,15 @@ const SideMenu = () => {
         <div className="slide">
           <p id="menu_heading">MENU</p>
           <hr />
-          <br />
+          {isLogged === "true" ? (
+            <a id="user_name" href="/">
+              <p>{userName}</p>
+              <button id="logout_button" onClick={LogOut}>
+                Logout
+              </button>
+            </a>
+          ) : null}
+          <hr />
           <div id="list">
             <ul>
               {isLogged === "true" && mode === "User" ? (
@@ -61,13 +69,6 @@ const SideMenu = () => {
                   About us
                 </a>
               </li>
-              {isLogged === "true" ? (
-                <li>
-                  <a className="a_sidemenu" href="/" onClick={LogOut}>
-                    Logout
-                  </a>
-                </li>
-              ) : null}
             </ul>
           </div>
         </div>

@@ -116,3 +116,31 @@ i{
     margin-right: 10px;
     border-radius: 5px;
 }
+#logout_button{
+    padding-left: 20px;
+    padding-right: 20px;
+    color:rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.536);
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    border:2px solid rgb(153, 149, 149);
+    transition: all 0.3s ease 0s;
+}
+#logout_button:hover{
+    background-color: black;
+    border:2px solid white;
+}
+#user_name{
+    display:flex;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.536);
+    border-radius: 5px;
+    width: fit-content;
+}
+
+@media (min-width: 900px) {
+    #sideMenuContainer{
+        display: none;
+    }
+}
