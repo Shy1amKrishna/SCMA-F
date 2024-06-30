@@ -32,6 +32,7 @@
     display:flex;
     flex-direction:column;
     gap:25px;
+    max-width: 100%;
 }
 .Linput{
     display:flex;
@@ -147,3 +148,26 @@ a:hover{
 }
 
 
+@media(max-width:900px){
+    .container{
+        width:100%;
+        border-radius: 0px;
+    }
+    .Linput{
+        width:90%;
+        height:80px;
+    }
+    .Linput input{
+        height:50px;
+        width:100%;
+        background:transparent;
+        border:none;
+        outline:none;
+        color:#000000;
+        font-size: 19px;
+    }
+    .submit-container{
+        margin:auto;
+        width: 100%;
+    }
+}
