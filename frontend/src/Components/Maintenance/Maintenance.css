@@ -175,54 +175,26 @@ resize: none;
 
 
 /* Media Query for Mobile Devices */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container2 {
       max-width: 100%; /* Adjusted width for smaller screens */
   }
-
-  .inputs {
-      margin: 30px auto; /* Adjusted margin for smaller screens */
-      width: 95%; /* Adjusted width for smaller screens */
+  .Minput{
+    width: 100%;
   }
-
-  .input {
-      height: 60px; /* Adjusted height for smaller screens */
-  }
-
-  .input h2 {
-      font-size: 1em; /* Adjusted font size for smaller screens */
-  }
+  #ComplaintBox{
+    width: 100%;
+    
+    }
+    #Complaint{
+      width: 100%;
+      padding:0px;
+    }
+    .cool-heading {
+      font-size: 40px;
+    }
 }
 
-/* Media Query for Tablets like iPad Mini */
-@media (max-width: 992px) {
-  .inputs {
-      max-width: 500px; /* Adjusted max-width for tablets */
-  }
-
-  .input {
-      height: 70px; /* Adjusted height for tablets */
-  }
-}
-@media (max-width: 1024px) {
-  .container2 {
-      max-width: 100%; /* Adjusted width for larger tablets */
-  }
-
-  .inputs {
-      max-width: 600px; /* Adjusted max-width for larger tablets */
-  }
-
-  .input {
-      height: 80px; /* Adjusted height for larger tablets */
-  }
-
-  .input h2 {
-      font-size: 1.2em; /* Adjusted font size for larger tablets */
-  }
-}
-  
-  
 
 
 
