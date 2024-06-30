@@ -17,8 +17,6 @@ h1 {
     margin-left: auto;
     align-items: center;
     width: 100%; /* Adjusted width to be more responsive */
-    background: url("../Assets/background.jpg") no-repeat fixed;
-    background-size: cover;
     height: 100vh;
 }
 
@@ -37,7 +35,7 @@ h1 {
     justify-content: center;
     height: 80px;
     width: 100%; /* Adjusted width to be more responsive */
-    background: rgba(255, 255, 255, 0.521);
+    background: rgba(255, 255, 255, 0.797);
     border: 2px solid black;
     border-radius: 10px;
     color: #000000;
