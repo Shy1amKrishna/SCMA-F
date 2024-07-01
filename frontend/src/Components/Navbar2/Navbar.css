@@ -70,4 +70,8 @@ p{
     .nav_links,#button,.cta{
         display: none;
     }
+    .logo{
+        max-width: 300px;
+        padding-left: 50px;
+    }
 }
