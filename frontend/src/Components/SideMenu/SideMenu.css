@@ -8,6 +8,7 @@
     pointer-events: none;
 }
 .slide{
+    position: fixed;
     padding-top: 100px;
     text-align: center;
     height: 100vh;
@@ -15,6 +16,7 @@
     background-color:#000000e7;
     transition: 0.5s ease;
     transform: translate(-250px);
+    z-index: 0;
 }
 ul li{
      list-style:none;
@@ -93,7 +95,6 @@ input:checked ~ .toggle .middle_line{
 }
 input:checked ~ .slide{
     transform: translate(0px);
-    z-index: -1;
 }
 #sideMenuContainer{
     position: absolute;
