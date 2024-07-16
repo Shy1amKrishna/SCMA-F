@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
-const collection = require("./config"); // Importing database models and configuration
+const collection = require("../config"); // Importing database models and configuration
 
 const app = express(); // Creating an Express application
 app.use(express.json()); // Middleware to parse JSON requests
