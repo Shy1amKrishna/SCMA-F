@@ -8,10 +8,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.post("/Userlogin", async (req, res) => {
+app.post("/Adminlogin", async (req, res) => {
   try {
     const { username, password } = req.body;
-    const user = await collection.UserModel.findOne({ name: username });
+    const user = await collection.AdminModel.findOne({ name: username });
 
     if (!user) {
       return res.status(404).send("User not found");

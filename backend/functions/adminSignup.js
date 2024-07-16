@@ -8,11 +8,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// user Signup endpoint
-app.post("/UserSignup", async (req, res) => {
+// Admin Signup endpoint
+app.post("/AdminSignup", async (req, res) => {
   try {
     const { username, password } = req.body;
-    const existingUser = await collection.UserModel.findOne({ name: username });
+    const existingUser = await collection.AdminModel.findOne({
+      name: username,
+    });
 
     if (existingUser) {
       return res.send("User already exists. Please try another username."); // Return error if user already exists
@@ -26,7 +28,7 @@ app.post("/UserSignup", async (req, res) => {
       password: hashedPassword,
     };
 
-    await collection.UserModel.create(newUser); // Create new user
+    await collection.AdminModel.create(newUser); // Create new user
     return res.send("User created successfully.");
   } catch (error) {
     console.error("Signup error:", error);

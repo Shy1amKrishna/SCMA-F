@@ -12,7 +12,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Internal Server Error");
 });
-
+/*
 //User Login endpoint
 app.post("/Userlogin", async (req, res) => {
   try {
@@ -190,7 +190,7 @@ app.put("/complaints/:id", async (req, res) => {
     return res.status(500).send("Internal server error"); // Return error for any server-side error
   }
 });
-
+*/
 const port = process.env.PORT || 5000; // Set port for server
 app.listen(port, () => {
   console.log("Server running on port:", port); // Start server and log port number

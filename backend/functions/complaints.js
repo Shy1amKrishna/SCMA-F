@@ -1,24 +1,34 @@
+const express = require("express");
+const serverless = require("serverless-http");
+const cors = require("cors");
+const bcrypt = require("bcrypt");
 const collection = require("../config");
 
-exports.handler = async (event) => {
+const app = express();
+app.use(express.json());
+app.use(cors());
+
+// Complaints endpoint
+app.post("/complaints", async (req, res) => {
   try {
-    const { UserName, Lab, SystemName, Complaint, Date } = JSON.parse(
-      event.body
-    );
+    const { UserName, Lab, SystemName, Complaint, Date } = req.body;
+    console.log("Complaint received from frontend:", req.body);
 
     const newComplaint = {
-      UserName,
-      Lab,
-      SystemName,
-      Complaint,
-      Date,
+      UserName: UserName,
+      Lab: Lab,
+      SystemName: SystemName,
+      Complaint: Complaint,
+      Date: Date,
       Status: "Waiting",
     };
 
-    await collection.ComplaintModel.create(newComplaint);
-    return { statusCode: 200, body: "Complaint recorded successfully" };
+    await collection.ComplaintModel.create(newComplaint); // Create new complaint
+    return res.send("Complaint recorded successfully");
   } catch (error) {
     console.error("Complaint handling error:", error);
-    return { statusCode: 500, body: "Internal server error" };
+    return res.status(500).send("Internal server error"); // Return error for any server-side error
   }
-};
+});
+
+module.exports.handler = serverless(app);

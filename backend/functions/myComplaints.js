@@ -8,15 +8,20 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Get list of comlaints for admin endpoint
-app.get("/usercomplaints", async (req, res) => {
+//get list of complaints for user endpoint
+app.get("/mycomplaints/:username", async (req, res) => {
   try {
-    //const usercomplaints = await collection.SystemModel.find(); // Fetch list of usercomplaints from database
-    const usercomplaints = await collection.ComplaintModel.find().sort({
+    const username = req.params.username;
+
+    // Fetch data from the database based on the username
+    const mycomplaints = await collection.ComplaintModel.find({
+      UserName: username,
+    }).sort({
       Status: -1, //sorting in descenting order
     });
-    //console.log(usercomplaints);
-    return res.json(usercomplaints); // Return list of usercomplaints as JSON response
+
+    //console.log(mycomplaints);
+    return res.json(mycomplaints); // Return list of mycomplaints as JSON response
   } catch (err) {
     console.error(err);
     return res.status(500).json({ message: "Internal Server Error" }); // Return error for any server-side error
