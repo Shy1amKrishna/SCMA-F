@@ -11,6 +11,8 @@ export const MyComplaints = () => {
   //const [filter, setFilter] = useState(loggedUser.toUpperCase());
   const [systems, setSystems] = useState([]);
 
+  const backendAddress = "https://scmabackend.netlify.app";
+
   // Function to handle input change for filtering
   const handleInputChange = (event) => {
     setFilter(event.target.value.toUpperCase());
@@ -21,7 +23,7 @@ export const MyComplaints = () => {
     const fetchSystems = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/mycomplaints/" + loggedUser
+          backendAddress + "/mycomplaints/" + loggedUser
         );
         setSystems(response.data);
         //console.log("Data:\n" + JSON.stringify(response.data));

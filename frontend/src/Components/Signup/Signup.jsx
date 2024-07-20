@@ -17,15 +17,14 @@ export const Signup = () => {
   const [response, setResponse] = useState(null); // Initialize with null
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const backendAddressUser = "http://localhost:5000/UserSignup";
-  const backendAddressAdmin = "http://localhost:5000/AdminSignup";
+  const backendAddress = "https://scmabackend.netlify.app";
   const Mode = localStorage.getItem("Mode");
 
   const handleSignup = async (e) => {
     e.preventDefault();
     if (Mode === "User") {
       try {
-        const response = await axios.post(backendAddressUser, {
+        const response = await axios.post(backendAddress + "/UserSignup", {
           username: username,
           password: password,
         });
@@ -40,7 +39,7 @@ export const Signup = () => {
       }
     } else {
       try {
-        const response = await axios.post(backendAddressAdmin, {
+        const response = await axios.post(backendAddress + "/AdminSignup", {
           username: username,
           password: password,
         });

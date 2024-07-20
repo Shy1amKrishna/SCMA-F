@@ -10,8 +10,9 @@ import { Navbar } from "../Navbar2/Navbar";
 export const Login = () => {
   const navigate = useNavigate();
   const path = "/signup";
-  const backendAddressUser = "http://localhost:5000/Userlogin";
-  const backendAddressAdmin = "http://localhost:5000/Adminlogin";
+  const backendAddress = "http://localhost:5000";
+  /*const backendAddress = "https://scmabackend.netlify.app";*/
+  console.log(backendAddress + "/Userlogin");
 
   function handleClick() {
     navigate(path);
@@ -28,7 +29,7 @@ export const Login = () => {
     e.preventDefault(); // Prevent the default form submission behavior
     if (Mode === "User") {
       try {
-        const response = await axios.post(backendAddressUser, {
+        const response = await axios.post(backendAddress + "/Userlogin", {
           username: username,
           password: password,
         });
@@ -59,7 +60,7 @@ export const Login = () => {
       }
     } else {
       try {
-        const response = await axios.post(backendAddressAdmin, {
+        const response = await axios.post(backendAddress + "/Adminlogin", {
           username: username,
           password: password,
         });

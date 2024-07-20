@@ -13,8 +13,9 @@ export const Maintenance = () => {
   let Lab;
   //console.log(Lab);
   //const navigate = useNavigate();
-  const backendAddress = "http://localhost:5000/complaints";
+  /*const backendAddress = "http://localhost:5000";*/
   //console.log("SystemName:",systemName);
+  const backendAddress = "https://scmabackend.netlify.app";
 
   // Create a new Date object
   let currentDate = new Date();
@@ -45,7 +46,7 @@ export const Maintenance = () => {
     if (complaint.length > 10 && complaint.length < 500) {
       try {
         // Sending data to the backend using Axios
-        const result = await axios.post(backendAddress, {
+        const result = await axios.post(backendAddress + "/complaints", {
           UserName: UserName,
           Lab: Lab,
           SystemName: systemName,
