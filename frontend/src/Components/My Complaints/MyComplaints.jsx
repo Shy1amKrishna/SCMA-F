@@ -11,7 +11,7 @@ export const MyComplaints = () => {
   //const [filter, setFilter] = useState(loggedUser.toUpperCase());
   const [systems, setSystems] = useState([]);
 
-  const backendAddress = "https://scmabackend.netlify.app";
+  const backendAddress = "http://localhost:5000";
 
   // Function to handle input change for filtering
   const handleInputChange = (event) => {

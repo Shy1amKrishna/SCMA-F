@@ -17,7 +17,7 @@ export const Signup = () => {
   const [response, setResponse] = useState(null); // Initialize with null
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const backendAddress = "https://scmabackend.netlify.app";
+  const backendAddress = "http://localhost:5000";
   const Mode = localStorage.getItem("Mode");
 
   const handleSignup = async (e) => {

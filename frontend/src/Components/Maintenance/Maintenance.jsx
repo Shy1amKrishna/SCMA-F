@@ -15,7 +15,7 @@ export const Maintenance = () => {
   //const navigate = useNavigate();
   /*const backendAddress = "http://localhost:5000";*/
   //console.log("SystemName:",systemName);
-  const backendAddress = "https://scmabackend.netlify.app";
+  const backendAddress = "http://localhost:5000";
 
   // Create a new Date object
   let currentDate = new Date();
