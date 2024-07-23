@@ -14,12 +14,17 @@ export const Signup = () => {
   function handleClick() {
     navigate(path);
   }
+
   const [response, setResponse] = useState(null); // Initialize with null
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  let varClass = "response_red";
+  const [varClass, setvarClass] = useState("");
   const backendAddress = "http://localhost:5000";
   const Mode = localStorage.getItem("Mode");
+
+  function setIt(value) {
+    setvarClass(value);
+  }
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -35,7 +40,10 @@ export const Signup = () => {
         // Set the response state
         setResponse(response.data);
         if (response.data === "User created successfully.") {
-          varClass = "response_green";
+          setIt("response_green");
+          console.log("worked");
+        } else {
+          setIt("response_red");
         }
       } catch (error) {
         // Handle login error

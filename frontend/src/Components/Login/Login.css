@@ -93,7 +93,6 @@
     margin:auto;
 }
 .dialog1 p{
-    color: red;
     font-style: italic;
     font-weight: bold;
 }
@@ -135,7 +134,14 @@ a:hover{
     color: rgb(0, 255, 255);
     font-size: 25px;
 }
-.response{
+.response_red{
+    color: red;
+    align-items:center;
+    justify-content: center;
+    margin:auto;
+}
+.response_green{
+    color: green;
     align-items:center;
     justify-content: center;
     margin:auto;
