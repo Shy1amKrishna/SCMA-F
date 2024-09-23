@@ -83,6 +83,7 @@ h1 {
   background:#eaeaea;
   border-radius:6px;
   border: 2px solid black;
+  color: black;
 }
 
 
@@ -92,9 +93,10 @@ h1 {
   background:transparent;
   border:none;
   outline:none;
-  color:#797979;
+  color:#000000;
   font-size: 19px;
   transition: font-size 0.3s ease; /* Add transition for font size */
+  text-transform: uppercase;
   
 }
 .Minput img{
